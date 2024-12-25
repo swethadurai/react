@@ -1,0 +1,133 @@
+/* About Me Section */
+.about-me2-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    max-width:1400px;
+    background-color: #f4f4f4; /* Light background color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Left side (text) styling */
+  .about-me2-left {
+    width: 50%; /* Adjust width as needed */
+    padding-right: 20px; /* Add some space between the image and text */
+  }
+  
+  .about-me2-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .about-me2-description {
+    font-size: 1.2rem;
+    color: #666;
+    line-height: 1.6;
+  }
+  
+  /* Right side (image) styling */
+  .about-me2-right {
+    width: 50%; /* Adjust width as needed */
+  }
+  
+  .about-me2-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* Optional: Add rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add shadow to image */
+  }
+  
+  /* Responsive styling for mobile */
+  @media (max-width: 768px) {
+    .about-me2-section {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .about-me2-left,
+    .about-me2-right {
+      width: 100%;
+      padding-right: 0;
+      padding-left: 0;
+    }
+  
+    .about-me2-image {
+      width: 80%; /* Make image smaller on mobile */
+      margin-top: 20px;
+    }
+  }
+/* Unique stars container for About Me */
+.about-me2-stars-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 9999;
+  }
+  
+  /* Unique star styling for About Me */
+  .about-me2-star {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #5f5151; /* Bright white for better visibility */
+    animation: about-me2-star-animation 1.5s ease-out forwards;
+    opacity: 0.9;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0 0 10px rgba(104, 103, 103, 0.8); /* Bright glowing effect */
+  }
+  
+  /* Star animation for About Me */
+  @keyframes about-me2-star-animation {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(0.5) translateX(10px) translateY(10px); /* Small movement */
+      opacity: 0;
+    }
+  }
+/* Social icons container */
+.social-links {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+  }
+  
+  /* Individual social icon styling */
+  .social-icon {
+    font-size: 2rem;
+    color: #e63946; /* Website's custom red color */
+    transition: transform 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+  }
+  
+  /* Scroll animation using AOS (fade-up effect) */
+  [data-aos="fade-up"] {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  
+  [data-aos="fade-up"].aos-animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Hover animation with subtle glow effect */
+  .social-icon:hover {
+    color: #ff7f50;
+    transform: scale(1.15);
+    
+  }
+  
+  /* No pseudo-elements needed for the new hover effect */
+  
+  

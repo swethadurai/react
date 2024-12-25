@@ -1,0 +1,110 @@
+/* General container */
+.banner-container {
+    display: flex;
+    background-color: #000000;
+    max-width: 1400px;
+    padding: 30px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    color: #fffefe;
+    height: 30vw;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+  
+    /* Set two background images */
+    background-image: url("images/banner_bg-1.png"), url("images/banner_bg-2.png");
+    background-position: bottom left, bottom right;
+    background-repeat: no-repeat, no-repeat;
+    background-size: contain, contain;
+  }
+  
+  /* Left image styling */
+  .banner-left-img {
+    width: 50%;
+    height: 100%;
+  }
+  
+  /* Right content styling */
+  .banner-right-content {
+    width: 50%;
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  .banner-visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  /* Title styling */
+  .banner-title {
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    color: #9e1818;
+    transition: transform 0.3s ease;
+  }
+  
+  .banner-title:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Name styling */
+  .banner-name {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #ffdd99;
+    margin-top: 10px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Role styling */
+  .banner-role {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #ff9966;
+    margin-top: 5px;
+    padding-bottom: 2px;
+  }
+  
+  /* Stars container */
+  .stars-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none; /* Prevent stars from interacting with other elements */
+    z-index: 9999;
+  }
+  
+  /* Individual star styling */
+  .star {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #a51616; /* Neon cyan color */
+    animation: star-animation 1.5s ease-out forwards;
+    opacity: 0.7;
+    border:1px solid rgba(233, 233, 233, 0.637);
+    box-shadow: 0 0 10px rgba(155, 20, 20, 0.8); /* Glowing effect */
+  }
+  
+  /* Star animation */
+  @keyframes star-animation {
+    0% {
+      transform: scale(1);
+      opacity: 0.7;
+    }
+    100% {
+      transform: scale(0.5) translateX(10px) translateY(10px); /* Small movement */
+      opacity: 0;
+    }
+  }
+  

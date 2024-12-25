@@ -1,0 +1,47 @@
+/* Container for the entire grid */
+.myworks-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 20px; /* Space between cards */
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  /* Individual card styles */
+  .myworks-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Card hover effect */
+  .myworks-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Image styling */
+  .myworks-image {
+    width: 100%;
+    height: 200px; /* Adjust height as needed */
+    object-fit: cover;
+  }
+  
+  /* Details container */
+  .myworks-details {
+    padding: 15px;
+    text-align: center;
+  }
+  
+  .myworks-details h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .myworks-details p {
+    font-size: 0.9em;
+    color: #666;
+  }
+  

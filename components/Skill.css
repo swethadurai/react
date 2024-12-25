@@ -1,0 +1,136 @@
+.skill-section {
+    background-color: #dddddd;
+    padding: 50px 20px;
+    color: #fff;
+    text-align: center;
+    min-height: 100vh;
+    background-image: url(images/skill-bg.png);
+    background-position: center;
+    background-size: 40%;
+    
+}
+  
+.skill-heading {
+    font-size: 2.7rem;
+    margin-bottom: 30px;
+    color: #000000;
+}
+  
+.skill-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 cards per row */
+    gap: 30px; /* Space between cards */
+    justify-items: center; /* Center the items horizontally */
+    padding: 0 20px; /* Padding around the container */
+}
+  
+.skill-card {
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    width: 220px;
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.3); /* Reduced glow */
+    position: relative;
+    overflow: hidden;
+}
+  
+.skill-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 16px rgba(255, 255, 255, 0.6); /* Smaller neon effect on hover */
+}
+  
+.skill-card[data-aos="zoom-in"] {
+    transform: scale(1); /* Initial scale when appearing */
+}
+  
+.skill-card::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background-size: 400% 400%;
+    border-radius: 50%;
+    animation: neon 3s ease-in-out infinite;
+    z-index: -1;
+}
+  
+@keyframes neon {
+    0% {
+        box-shadow: 0 0 4px #ff0000, 0 0 6px #ff0000, 0 0 8px #ff0000; /* Smaller red glow */
+    }
+    100% {
+        box-shadow: 0 0 10px #ff0000, 0 0 12px #ff0000, 0 0 14px #ff0000; /* Smaller red glow */
+    }
+}
+  
+.neonText {
+    color: #fff;
+    text-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px #ff0000, /* Updated to red */
+        0 0 82px #ff0000, /* Updated to red */
+        0 0 92px #ff0000, /* Updated to red */
+        0 0 102px #ff0000, /* Updated to red */
+        0 0 151px #ff0000; /* Updated to red */
+}
+  
+.skill-card {
+    font-size: 6.2rem;
+    background-image: url(images/skill\ cardbg.jpg);
+    background-size: cover;
+    animation: pulsate 1.5s infinite alternate;
+    border: 0.2rem solid #fff;
+    border-radius:50%;
+    padding: 0.4em;
+    box-shadow: 0 0 .2rem #fff,
+                0 0 .2rem #fff,
+                0 0 1.5rem #ff0000, /* Smaller red glow */
+                0 0 0.5rem #ff0000, /* Smaller red glow */
+                inset 0 0 0.8rem #ff0000; /* Reduced red glow */
+}
+  
+@keyframes pulsate {
+    100% {
+        text-shadow:
+            0 0 2px #fff,
+            0 0 6px #fff,
+            0 0 12px #ff0000, /* Smaller red glow */
+            0 0 18px #ff0000;
+    }
+
+    0% {
+        text-shadow:
+            0 0 2px #fff,
+            0 0 4px #fff,
+            0 0 8px #ff0000, /* Smaller red glow */
+            0 0 12px #ff0000;
+    }
+}
+  
+.skill-icon {
+    font-size: 4rem;
+    color: #7c0303;
+    border-radius: 50%;
+    padding: 15px;
+    background-color: #cacaca; /* Dark background for the icon */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3); /* Subtle glow */
+}
+  
+.skill-name {
+    margin-top: 15px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #fff;
+}

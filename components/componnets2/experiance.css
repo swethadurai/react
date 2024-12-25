@@ -1,0 +1,154 @@
+/* Main section styling */
+.experience2-section {
+    background-color: #000;
+    background-repeat: no-repeat;
+    padding: 40px 20px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Left corner image */
+.experience2-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 30%;
+ 
+}
+
+/* Right corner image */
+.experience2-section::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 30%;
+   
+}
+
+/* Section heading */
+.section-heading {
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 2rem;
+    text-align: center;
+    z-index: 2; /* Ensures it displays over the images */
+}
+
+/* Experience2 container with max-width */
+.experience2-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 1400px;
+    width: 100%;
+    padding: 0 20px;
+    align-items: center;
+    z-index: 2; /* Ensures it displays over the images */
+}
+
+/* Card styling with glass effect and scroll reveal */
+.experience2-card {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 750px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.4s ease, opacity 0.5s ease;
+    overflow: hidden;
+    position: relative;
+    opacity: 0;
+    transform: translateY(20px);
+    z-index: 2;
+}
+
+/* Blooming effect on hover */
+.experience2-card:hover {
+    background-color: rgb(168, 20, 20); /* Slightly lighter background on hover */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    transform: scale(1.02);
+}
+
+/* Blooming glow effect using ::before */
+.experience2-card::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.5), transparent 60%);
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0); /* Initially hidden */
+    z-index: 0;
+}
+
+.experience2-card:hover::before {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1); /* Expands on hover */
+}
+
+/* Ensure text and content display above blooming effect */
+.experience2-content {
+    color: #ffffff;
+    z-index: 2;
+}
+
+/* Card title and content styling */
+.experience2-title {
+    font-size: 1.8rem;
+    color: #ffffff;
+}
+
+.experience2-company,
+.experience2-duration {
+    color: #cccccc;
+}
+
+.experience2-description {
+    color: #dddddd;
+}
+
+/* Logo styling */
+.experience2-logo {
+    width: 200px;
+    margin: 30px;
+    max-height: 200px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect for logos */
+.experience2-card:hover .experience2-logo {
+    transform: scale(1.05);
+}
+
+/* Scroll reveal effect */
+.scroll-reveal {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .experience2-container {
+        padding: 0;
+    }
+
+    .experience2-card {
+        width: 100%;
+        max-width: 100%;
+    }
+}
